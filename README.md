@@ -1,160 +1,87 @@
 # SQL Learning Project
 
-This repository contains SQL queries that analyze a real-world Data Analyst job postings dataset. The project explores job salaries, in-demand skills, high-paying skills, and the relationship between salary and market demand.
+A collection of SQL analyses performed on a real-world Data Analyst job postings dataset. This project explores salary trends, market demand, and the skills that provide the highest career value using PostgreSQL.
 
 ---
 
-## Project Structure
+## Dashboard
 
-```
-sql_learning/
-│
-├── project_sql/
-│   ├── top_paying_jobs.sql
-│   ├── top_paying_job_skills.sql
-│   ├── top_demanding_skills.sql
-│   ├── top_paying_skills.sql
-│   └── most_optimal_skill.sql
-│
-├── sql_load/
-└── README.md
-```
+<p align="center">
+  <img src="project_sql/images/sql_dashboard.png" width="100%" alt="SQL Analysis Dashboard">
+</p>
+
+---
+
+# Project Overview
+
+This project answers five important business questions:
+
+1. Which remote Data Analyst jobs offer the highest salaries?
+2. Which skills are most frequently requested by employers?
+3. Which technical skills command the highest salaries?
+4. Which skills are required in the highest-paying jobs?
+5. Which skills offer the best balance of salary and demand?
 
 ---
 
 # Queries
 
-## 1. Top Paying Data Analyst Jobs
-
-**Objective**
-
-Identify the highest-paying remote Data Analyst jobs.
-
-### SQL File
-
-[View Query](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_paying_jobs.sql)
-
-### Insights
-
-- Filters only remote Data Analyst positions.
-- Removes jobs without salary information.
-- Returns the Top 10 highest-paying jobs.
-- Includes company information.
-
-### Visualization
-
-Replace with your chart after uploading.
-
-```
-project_sql/images/top_paying_jobs.png
-```
-
-```markdown
-![Top Paying Jobs](project_sql/images/top_paying_jobs.png)
-```
+| Analysis | Description | SQL File |
+|----------|-------------|----------|
+| 💰 Top Paying Jobs | Finds the highest-paying remote Data Analyst positions. | [top_paying_jobs.sql](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_paying_jobs.sql) |
+| 🛠 Top Paying Job Skills | Identifies the skills required by the highest-paying jobs. | [top_paying_job_skills.sql](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_paying_job_skills.sql) |
+| 📈 Top Demanding Skills | Determines the skills most frequently requested in job postings. | [top_demanding_skills.sql](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_demanding_skills.sql) |
+| 💵 Top Paying Skills | Calculates the highest-paying technical skills based on average salary. | [top_paying_skills.sql](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_paying_skills.sql) |
+| ⭐ Most Optimal Skills | Combines salary and demand to identify the most valuable skills to learn. | [most_optimal_skill.sql](https://github.com/Pai05/sql_learning/blob/main/project_sql/most_optimal_skill.sql) |
 
 ---
 
-## 2. Skills Required for Top Paying Jobs
+# Dashboard Highlights
 
-**Objective**
+### 💰 Top Paying Jobs
 
-Find the skills required for the highest-paying Data Analyst jobs.
-
-### SQL File
-
-[View Query](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_paying_job_skills.sql)
-
-### Insights
-
-- Joins top-paying jobs with required skills.
-- Shows which technologies employers expect.
-- Helps identify skills worth learning.
-
-### Visualization
-
-```markdown
-![Top Paying Job Skills](project_sql/images/top_paying_job_skills.png)
-```
+- Identifies the ten highest-paying remote Data Analyst roles.
+- Filters out jobs without salary information.
+- Includes company details and annual salary.
+- Helps understand the upper end of the Data Analyst salary market.
 
 ---
 
-## 3. Top Demanding Skills
+### 📈 Top Demanding Skills
 
-**Objective**
-
-Find the most frequently requested skills for remote Data Analyst jobs.
-
-### SQL File
-
-[View Query](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_demanding_skills.sql)
-
-### Insights
-
-- Counts how often every skill appears.
-- Returns the Top 10 most requested skills.
-- Useful for understanding current market demand.
-
-### Visualization
-
-```markdown
-![Top Demanding Skills](project_sql/images/top_demanding_skills.png)
-```
+- SQL is the most requested skill by employers.
+- Excel and Python remain essential for analysts.
+- Tableau and Power BI dominate visualization requirements.
+- Cloud technologies such as Azure are increasingly common.
 
 ---
 
-## 4. Top Paying Skills
+### 💵 Top Paying Skills
 
-**Objective**
-
-Identify the highest-paying technical skills.
-
-### SQL File
-
-[View Query](https://github.com/Pai05/sql_learning/blob/main/project_sql/top_paying_skills.sql)
-
-### Insights
-
-- Calculates average salary for each skill.
-- Excludes records without salary.
-- Returns the Top 10 highest-paying skills.
-
-### Visualization
-
-```markdown
-![Top Paying Skills](project_sql/images/top_paying_skills.png)
-```
+- PySpark offers the highest average salary.
+- Big Data and Machine Learning tools command premium compensation.
+- Developer collaboration platforms such as GitLab and Bitbucket also appear among the highest-paying technologies.
+- Python ecosystem libraries continue to provide excellent earning potential.
 
 ---
 
-## 5. Most Optimal Skills
+### 🛠 Top Paying Job Skills
 
-**Objective**
-
-Identify skills that have both:
-
-- High salary
-- High demand
-
-### SQL File
-
-[View Query](https://github.com/Pai05/sql_learning/blob/main/project_sql/most_optimal_skill.sql)
-
-### Insights
-
-- Combines skill demand with average salary.
-- Computes a salary-to-demand ratio.
-- Highlights skills that provide the best career value.
-
-### Visualization
-
-```markdown
-![Most Optimal Skills](project_sql/images/most_optimal_skill.png)
-```
+- Examines the technologies used by companies offering the highest salaries.
+- Highlights the combination of programming languages, BI tools, cloud platforms, and data engineering technologies.
+- Demonstrates that high-paying jobs require a diverse technical skill set rather than a single technology.
 
 ---
 
-# SQL Concepts Used
+### ⭐ Most Optimal Skills
+
+- Combines market demand with average salary.
+- Helps identify skills that maximize both employability and earning potential.
+- Excellent guide for prioritizing future learning.
+
+---
+
+# SQL Concepts Demonstrated
 
 - Common Table Expressions (CTEs)
 - INNER JOIN
@@ -167,33 +94,53 @@ Identify skills that have both:
 - COUNT()
 - ROUND()
 - UNION ALL
-- Filtering with WHERE
-- Multiple Table Joins
+- Aliasing
+- Multi-table Joins
+- Query Optimization
 
 ---
 
-# Dataset
+# Repository Structure
 
-The project analyzes a Data Analyst job postings dataset containing:
-
-- Job Posting Facts
-- Company
-- Skills
-- Skills-Job
+```
+sql_learning
+│
+├── project_sql
+│   ├── top_paying_jobs.sql
+│   ├── top_paying_job_skills.sql
+│   ├── top_demanding_skills.sql
+│   ├── top_paying_skills.sql
+│   ├── most_optimal_skill.sql
+│   └── images
+│       └── sql_dashboard.png
+│
+├── sql_load
+│
+└── README.md
+```
 
 ---
 
-# Key Learnings
+# Key Takeaways
 
-Through this project I learned:
+From this project I learned to:
 
-- Writing complex SQL queries
-- Using multiple JOIN operations
-- Building Common Table Expressions (CTEs)
-- Performing salary analysis
-- Finding market-demanded skills
-- Combining multiple datasets for business insights
-- Optimizing analytical SQL queries
+- Write analytical SQL queries on large datasets.
+- Use CTEs to improve query readability.
+- Combine multiple tables using joins.
+- Perform salary and demand analysis.
+- Build queries that answer real business questions.
+- Transform raw data into meaningful insights.
+
+---
+
+# Technologies Used
+
+- PostgreSQL
+- SQL
+- VS Code
+- Git
+- GitHub
 
 ---
 
@@ -201,4 +148,5 @@ Through this project I learned:
 
 **Sudarshan Pai**
 
-GitHub: https://github.com/Pai05
+- GitHub: https://github.com/Pai05
+- LinkedIn: *(Add your LinkedIn profile here)*
