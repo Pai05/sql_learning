@@ -149,4 +149,3 @@ From this project I learned to:
 **Sudarshan Pai**
 
 - GitHub: https://github.com/Pai05
-- LinkedIn: *(Add your LinkedIn profile here)*
